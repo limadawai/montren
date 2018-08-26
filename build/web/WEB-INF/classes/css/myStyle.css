@@ -1,0 +1,16 @@
+/*======================== Glyphicons Activation ======================*/
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url("#{resource['fonts:glyphicons-halflings-regular.eot']}");
+    src: url("#{resource['fonts:glyphicons-halflings-regular.eot?#iefix']}") format('embedded-opentype'), 
+         url("#{resource['fonts:glyphicons-halflings-regular.woff']}") format('woff'), 
+         url("#{resource['fonts:glyphicons-halflings-regular.ttf']}") format('truetype'), 
+         url("#{resource['fonts:glyphicons-halflings-regular.svg#glyphicons_halflingsregular']}") format('svg');
+    font-family: 'FontAwesome';
+    src: url("#{resource['fonts:fontawesome-webfont.eot']}");
+    src: url("#{resource['fonts:fontawesome-webfont.eot']}") format('embedded-opentype'),
+         url("#{resource['fonts:fontawesome-webfont.woff2']}") format('woff2'),
+         url("#{resource['fonts:fontawesome-webfont.woff']}") format('woff'),
+         url("#{resource['fonts:fontawesome-webfont.ttf']}") format('truetype'),
+         url("#{resource['fonts:fontawesome-webfont.svg?#fontawesomeregular']}") format('svg');
+}
