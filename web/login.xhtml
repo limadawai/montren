@@ -2,44 +2,47 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
-    <ui:composition template="/WEB-INF/include/template.xhtml">
-        <ui:define name="head">
-            <title>Login Form</title>
-            <h:outputStylesheet library="css" name="myStyle.css" />
-        </ui:define>
-        <ui:define name="body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-md-offset-4" style="margin-top:2%">
-                        <center>
-                            <strong><h2>Monitoring Trend</h2></strong>
-                            <h:graphicImage value="resources/img/logo-kemenkeu.png" style="width:30%" />
-                            <h4>Dirjen Perimbangan</h4>
-                        </center>
-                        <div class="panel panel-default" style="margin-top:20px">
-                            <div class="panel-heading" style="margin:0">
-                                <center>Form Login</center>
-                            </div>
-                            <div class="panel-body">
-                                <h:form>
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                        <input type="text" class="form-control" value="#{login.uname}" placeholder="Username"></input>
-                                    </div>
-                                    <div class="input-group" style="margin-top:5px">
-                                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                        <input type="password" class="form-control" value="#{login.passwd}" placeholder="Password"></input>
-                                    </div><br />
-                                    <div class="input-group" style="margin-top:5px;width:100%">
-                                        <h:commandButton action="#{login.validasi()}" value="Sign in" class="btn btn-primary btn-block" />
-                                    </div>
-                                </h:form>
-                            </div>
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <h:outputStylesheet library="css" name="bootstrap.min.css"/>
+        <h:outputStylesheet library="css" name="font-awesome.min.css" />
+        <h:outputStylesheet library="css" name="myStyle.css" />
+    </h:head>
+    <h:body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4" style="margin-top:2%">
+                    <center>
+                        <strong><h2>Monitoring Trend</h2></strong>
+                        <h:graphicImage value="resources/img/logo-kemenkeu.png" style="width:30%" />
+                        <h4>Dirjen Perimbangan</h4>
+                    </center>
+                    <div class="panel panel-default" style="margin-top:20px">
+                        <div class="panel-heading" style="margin:0">
+                            <center>Form Login</center>
+                        </div>
+                        <div class="panel-body">
+                            <h:form>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <h:inputText value="#{userBean.uname}" class="form-control" p:placeholder="username" />
+                                </div>
+                                <div class="input-group" style="margin-top:5px">
+                                    <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                    <h:inputSecret value="#{userBean.passwd}" class="form-control" p:placeholder="password" />
+                                </div><br />
+                                <div class="input-group" style="margin-top:5px;width:100%">
+                                    <h:commandButton action="#{userBean.validasi()}" value="Sign in" class="btn btn-primary btn-block" />
+                                </div>
+                            </h:form>
                         </div>
                     </div>
                 </div>
             </div>
-        </ui:define>
-    </ui:composition> 
+        </div>
+        <h:outputScript library="js" name="jquery.min.js"/>
+        <h:outputScript library="js" name="bootstrap.min.js" />
+    </h:body>
 </html>

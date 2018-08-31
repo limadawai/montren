@@ -6,4 +6,21 @@
     <application>
         <resource-handler>org.omnifaces.resourcehandler.UnmappedResourceHandler</resource-handler>
     </application>
+    
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-action>#{obj.validasi()}</from-action>
+            <from-outcome>sukses</from-outcome>
+            <to-view-id>/admin/dashboard.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-action>#{obj.validasi()}</from-action>
+            <from-outcome>gagal</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    
 </faces-config>
