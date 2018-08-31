@@ -9,7 +9,7 @@
 <!-- in the project's Project Properties dialog box.-->
 <project name="montren" default="default" basedir=".">
     <description>Builds, tests, and runs the project montren.</description>
-    <import file="nbproject/build-impl.xml"/>
+    <!--<import file="nbproject/build-impl.xml"/>-->
     <!--
 
     There exist several targets which are by default empty and which can be 
@@ -68,4 +68,13 @@
     nbproject/build-impl.xml file. 
 
     -->
+    <target name="compile">
+        <echo message="Compiling source code"/>
+    </target>
+    <target name="clean">
+        <echo message="Cleaning source code"/>
+    </target>
+    <target name="run">
+        <echo message="Run source code"/>
+    </target>
 </project>
