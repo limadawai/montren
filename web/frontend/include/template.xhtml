@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content=""/>
+        <meta name="author" content="Dirjen Perimbangan Keuangan"/>
+
+        <h:outputStylesheet library="frontend" name="bootstrap.min.css"/>
+        <h:outputStylesheet library="font-awesome" name="css/font-awesome.min.css" />
+        <h:outputStylesheet library="frontend" name="css/stylesheet.css" />
+        <h:outputStylesheet library="frontend" name="css/css_layout.css" />
+        <h:outputStylesheet library="frontend" name="css/css_widget.css" />
+        <h:outputStylesheet library="frontend" name="css/css_theme.css" />
+        <h:outputStylesheet library="frontend" name="css/hover.css" />
+        <h:outputStylesheet library="frontend" name="css/hover-min.css" />
+        <h:outputStylesheet library="frontend" name="css/css_responsive.css" />        
+        <h:outputStylesheet library="frontend" name="css/pace.minimal.css" />
+        <ui:insert name="head"/>
+    </h:head>
+    
+    <h:body class="hold-transition skin-blue sidebar-mini">
+        <ui:insert name="body"/>        
+        <h:outputScript library="frontend" name="js/jquery-1.9.1.js"/>        
+        <h:outputScript library="frontend" name="js/jquery-migrate-1.2.1.min.js"/>        
+        <h:outputScript library="frontend" name="js/bootstrap.min.js"/>        
+        <h:outputScript library="frontend" name="js/application.js"/>        
+        <h:outputScript library="frontend" name="js/pace.min.js"/>        
+        <h:outputScript library="frontend" name="js/highcharts.js"/>
+        <h:outputScript library="frontend" name="js/modulemap.js"/>
+        <h:outputScript library="frontend" name="js/map.js"/>
+        <h:outputScript library="frontend" name="js/id-all.js"/>
+        <h:outputScript library="frontend" name="js/chart.js"/>
+        <ui:insert name="footerBase"/>
+    </h:body>
+</html>
